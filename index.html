@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\app.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>数据交互项目：流动儿童的困境</title>
+</head>
+<body>
+    <main>
+        <section class="header">
+            <div class="video-wrapper">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./image/video_2.mp4" type="video/mp4">
+                  </video>
+            </div>
+           <div class="header-inner">
+                <div class="header-description">Powered by Jamie</div>
+                <h1 class="big-text">流动儿童的困境<br>——容身之处？走向何方？</h1>
+                <div class="header-description">下滑阅读更多</div>
+           </div>
+        </section>
+    </main>
+    <div class="intro">
+        <div class="intro-text">
+            <h2 class="hide">
+                <span class="text">四分之一的孩子</span>
+            </h2>
+            <h2 class="hide">
+                <span class="text">正在经历的</span>
+            </h2>
+            <h2 class="hide">
+                <span class="text">不公</span>
+            </h2>
+        </div>
+    </div>
+    <div class="slider"></div>
+    <!-- page2 intro  -->
+    <section class="content page-1">
+        <div class="p1 description slide-in from-left">
+            <svg class="icon-1 icon" fill="#FFF899" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M20.492,7.969,10.954.975A5,5,0,0,0,3,5.005V19a4.994,4.994,0,0,0,7.954,4.03l9.538-6.994a5,5,0,0,0,0-8.062Z"/></svg>
+            <p>谁是流动儿童？</p>
+        </div>
+        <div class="description slide-in from-right">
+            <p>流动儿童是指0-17周岁的流动人口。<br>流动儿童缺失接受公平教育的机会，<br>因为户籍和教育政策问题，许多流动儿童无法享受正常的教育公共服务。</p>
+        </div>
+
+    </section>
+
+    <!-- page3 floating-population-map -->
+    <section class="content page-1 ">
+
+        <div class="description slide-in from-left">
+            <div class="indication"> <img class="icon-1" fill="#38533D" src="./image/mouse.png"> 鼠标悬浮解锁更多信息</div>
+            <p>流动儿童绝对不是一小部分孩子。<br>根据全国第七次人口普查数据显示，中国有<span class="text-stress">3.76亿</span>流动人口。</p>
+            <br>
+            <p>可以看出大部分跨省流动人口都流入了广东、浙江、北京、上海等<span class="text-stress-2">经济发达地区</span>。</p>
+        </div>
+        <div class="f-population-map chart">
+        </div>
+    </section>
+    <section class="content page-1 people-trigger">
+        <div class="description slide-in from-left">
+            <p> 2020年的人口普查显示中国有<span class="text-stress">7109万</span>流动儿童，<br>相当于每四个儿童中就有一个流动儿童。</p>
+        </div>
+        <div class="peoples slide-in from-right">
+            <div>
+                <svg  class="people-svg" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="layer1"><path d="M 9.5 0 C 8.1252105 0 7 1.1252105 7 2.5 C 7 3.0633617 7.1940199 3.5807403 7.5117188 4 L 7.5 4 C 6.1252115 4 5 5.12521 5 6.5 L 5 10.5 C 5 11.702941 5.8636264 12.715051 7 12.949219 L 7 18.5 C 7 19.328427 7.6715729 20 8.5 20 L 10.5 20 C 11.328427 20 12 19.328427 12 18.5 L 12 12.949219 L 12.001953 12.949219 C 13.138233 12.715051 14 11.702941 14 10.5 L 14 6.5 C 14 5.12521 12.874789 4 11.5 4 L 11.488281 4 C 11.805982 3.5807403 12 3.0633617 12 2.5 C 12 1.1252105 10.87479 0 9.5 0 z M 9.5 1 C 10.33435 1 11 1.6656505 11 2.5 C 11 2.8417718 10.877896 3.1436223 10.71875 3.3574219 C 10.559605 3.5712214 10.488843 3.7827376 10.488281 4 C 10.488281 4.5522847 10.935996 5 11.488281 5 L 11.5 5 C 12.33435 5 13 5.66565 13 6.5 L 13 10.5 C 13 11.157682 12.583804 11.705514 12 11.910156 L 12 7.5 C 12 7.2238576 11.776142 7 11.5 7 C 11.223858 7 11 7.2238576 11 7.5 L 11 18.5 C 11 18.776142 10.776142 19 10.5 19 L 10 19 L 10 13.5 C 10 13.223858 9.7761424 13 9.5 13 C 9.2238576 13 9 13.223858 9 13.5 L 9 19 L 8.5 19 C 8.2238576 19 8 18.776142 8 18.5 L 8 7.5 C 8 7.2238576 7.7761424 7 7.5 7 C 7.2238576 7 7 7.2238576 7 7.5 L 7 11.910156 C 6.4161964 11.705514 6 11.157682 6 10.5 L 6 6.5 C 6 5.66565 6.6656505 5 7.5 5 L 7.5117188 5 C 8.0640035 5 8.5117188 4.5522847 8.5117188 4 C 8.5111565 3.7827376 8.4403749 3.5712202 8.28125 3.3574219 C 8.1221251 3.1436236 8 2.8417718 8 2.5 C 8 1.6656505 8.6656505 1 9.5 1 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>
+                <svg  class="people-svg" id="people-stress" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="layer1"><path d="M 9.5 0 C 8.1252105 0 7 1.1252105 7 2.5 C 7 3.0633617 7.1940199 3.5807403 7.5117188 4 L 7.5 4 C 6.1252115 4 5 5.12521 5 6.5 L 5 10.5 C 5 11.702941 5.8636264 12.715051 7 12.949219 L 7 18.5 C 7 19.328427 7.6715729 20 8.5 20 L 10.5 20 C 11.328427 20 12 19.328427 12 18.5 L 12 12.949219 L 12.001953 12.949219 C 13.138233 12.715051 14 11.702941 14 10.5 L 14 6.5 C 14 5.12521 12.874789 4 11.5 4 L 11.488281 4 C 11.805982 3.5807403 12 3.0633617 12 2.5 C 12 1.1252105 10.87479 0 9.5 0 z M 9.5 1 C 10.33435 1 11 1.6656505 11 2.5 C 11 2.8417718 10.877896 3.1436223 10.71875 3.3574219 C 10.559605 3.5712214 10.488843 3.7827376 10.488281 4 C 10.488281 4.5522847 10.935996 5 11.488281 5 L 11.5 5 C 12.33435 5 13 5.66565 13 6.5 L 13 10.5 C 13 11.157682 12.583804 11.705514 12 11.910156 L 12 7.5 C 12 7.2238576 11.776142 7 11.5 7 C 11.223858 7 11 7.2238576 11 7.5 L 11 18.5 C 11 18.776142 10.776142 19 10.5 19 L 10 19 L 10 13.5 C 10 13.223858 9.7761424 13 9.5 13 C 9.2238576 13 9 13.223858 9 13.5 L 9 19 L 8.5 19 C 8.2238576 19 8 18.776142 8 18.5 L 8 7.5 C 8 7.2238576 7.7761424 7 7.5 7 C 7.2238576 7 7 7.2238576 7 7.5 L 7 11.910156 C 6.4161964 11.705514 6 11.157682 6 10.5 L 6 6.5 C 6 5.66565 6.6656505 5 7.5 5 L 7.5117188 5 C 8.0640035 5 8.5117188 4.5522847 8.5117188 4 C 8.5111565 3.7827376 8.4403749 3.5712202 8.28125 3.3574219 C 8.1221251 3.1436236 8 2.8417718 8 2.5 C 8 1.6656505 8.6656505 1 9.5 1 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>
+            </div>
+            <div>
+                <svg  class="people-svg" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="layer1"><path d="M 9.5 0 C 8.1252105 0 7 1.1252105 7 2.5 C 7 3.0633617 7.1940199 3.5807403 7.5117188 4 L 7.5 4 C 6.1252115 4 5 5.12521 5 6.5 L 5 10.5 C 5 11.702941 5.8636264 12.715051 7 12.949219 L 7 18.5 C 7 19.328427 7.6715729 20 8.5 20 L 10.5 20 C 11.328427 20 12 19.328427 12 18.5 L 12 12.949219 L 12.001953 12.949219 C 13.138233 12.715051 14 11.702941 14 10.5 L 14 6.5 C 14 5.12521 12.874789 4 11.5 4 L 11.488281 4 C 11.805982 3.5807403 12 3.0633617 12 2.5 C 12 1.1252105 10.87479 0 9.5 0 z M 9.5 1 C 10.33435 1 11 1.6656505 11 2.5 C 11 2.8417718 10.877896 3.1436223 10.71875 3.3574219 C 10.559605 3.5712214 10.488843 3.7827376 10.488281 4 C 10.488281 4.5522847 10.935996 5 11.488281 5 L 11.5 5 C 12.33435 5 13 5.66565 13 6.5 L 13 10.5 C 13 11.157682 12.583804 11.705514 12 11.910156 L 12 7.5 C 12 7.2238576 11.776142 7 11.5 7 C 11.223858 7 11 7.2238576 11 7.5 L 11 18.5 C 11 18.776142 10.776142 19 10.5 19 L 10 19 L 10 13.5 C 10 13.223858 9.7761424 13 9.5 13 C 9.2238576 13 9 13.223858 9 13.5 L 9 19 L 8.5 19 C 8.2238576 19 8 18.776142 8 18.5 L 8 7.5 C 8 7.2238576 7.7761424 7 7.5 7 C 7.2238576 7 7 7.2238576 7 7.5 L 7 11.910156 C 6.4161964 11.705514 6 11.157682 6 10.5 L 6 6.5 C 6 5.66565 6.6656505 5 7.5 5 L 7.5117188 5 C 8.0640035 5 8.5117188 4.5522847 8.5117188 4 C 8.5111565 3.7827376 8.4403749 3.5712202 8.28125 3.3574219 C 8.1221251 3.1436236 8 2.8417718 8 2.5 C 8 1.6656505 8.6656505 1 9.5 1 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>
+                <svg  class="people-svg" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="layer1"><path d="M 9.5 0 C 8.1252105 0 7 1.1252105 7 2.5 C 7 3.0633617 7.1940199 3.5807403 7.5117188 4 L 7.5 4 C 6.1252115 4 5 5.12521 5 6.5 L 5 10.5 C 5 11.702941 5.8636264 12.715051 7 12.949219 L 7 18.5 C 7 19.328427 7.6715729 20 8.5 20 L 10.5 20 C 11.328427 20 12 19.328427 12 18.5 L 12 12.949219 L 12.001953 12.949219 C 13.138233 12.715051 14 11.702941 14 10.5 L 14 6.5 C 14 5.12521 12.874789 4 11.5 4 L 11.488281 4 C 11.805982 3.5807403 12 3.0633617 12 2.5 C 12 1.1252105 10.87479 0 9.5 0 z M 9.5 1 C 10.33435 1 11 1.6656505 11 2.5 C 11 2.8417718 10.877896 3.1436223 10.71875 3.3574219 C 10.559605 3.5712214 10.488843 3.7827376 10.488281 4 C 10.488281 4.5522847 10.935996 5 11.488281 5 L 11.5 5 C 12.33435 5 13 5.66565 13 6.5 L 13 10.5 C 13 11.157682 12.583804 11.705514 12 11.910156 L 12 7.5 C 12 7.2238576 11.776142 7 11.5 7 C 11.223858 7 11 7.2238576 11 7.5 L 11 18.5 C 11 18.776142 10.776142 19 10.5 19 L 10 19 L 10 13.5 C 10 13.223858 9.7761424 13 9.5 13 C 9.2238576 13 9 13.223858 9 13.5 L 9 19 L 8.5 19 C 8.2238576 19 8 18.776142 8 18.5 L 8 7.5 C 8 7.2238576 7.7761424 7 7.5 7 C 7.2238576 7 7 7.2238576 7 7.5 L 7 11.910156 C 6.4161964 11.705514 6 11.157682 6 10.5 L 6 6.5 C 6 5.66565 6.6656505 5 7.5 5 L 7.5117188 5 C 8.0640035 5 8.5117188 4.5522847 8.5117188 4 C 8.5111565 3.7827376 8.4403749 3.5712202 8.28125 3.3574219 C 8.1221251 3.1436236 8 2.8417718 8 2.5 C 8 1.6656505 8.6656505 1 9.5 1 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>
+            </div>
+        </div>
+    </section>
+    <!-- 流动儿童面临的问题 -->
+    <section class="title title-2">
+        <div><h2>流动儿童面临的教育问题<br>THE EDUCATION</h2></div>
+    </section>
+    <!-- 在一起和困难指数 -->
+    <section class="content page-2 reverse">
+            <div class="together-index-chart chart slide-in from-left"></div>
+            <div class="description slide-in from-right">
+                <p>新公民计划根据历年发布的教育统计数据<br>测算了义务教育阶段进城务工人员和子女的“在一起”指数,<br>虽然逐年提高，但是仍然只是<span class="text-stress-2">微微过半</span>。<br>
+                这意味着有近一半的处于义务教育阶段的流动儿童与父母分离</p>
+            </div>
+    </section>
+
+    <section class="content page-2">
+            <div class="description slide-in from-left">
+                父母与孩子分离的重要原因是流动儿童在城市就学困难。<br>
+                国家统计局发布的《农民工监测调查报告》显示，<br>
+                从2016年至2020年，一半以上</span>的农民工表示孩子在城市上学面临困难。<br>
+                根据2020年的数据，<span class="text-stress-2">本地入学（升学）困难</span>和<span class="text-stress-2">费用高</span>是农民工最认同的问题。<br>
+                农民工是中国经济的动力，也是中国流动人口的重要组成部分，<br>
+                但由于在经济和政策上的劣势地位，他们的孩子经历着严重的教育问题。<br>
+            </div>
+            <div class="difficult-index-chart chart slide-in from-right"></div>
+    </section>
+    <section class="title title-3">
+        <div>
+            <h2>梦的破碎——流动儿童的未来<br>THE FUTURE</h2>
+        </div>
+    </section>
+    <section class="content page-3">
+            <div class="description border-effect-1 slide-in from-left">
+                <p>根据对北京近两千名初中打工子弟学校的分析，流动儿童难以通过教育实现阶级提升。<br>
+                    从2010年研究开始，每年在学人数都在下降。<br>按照正常升学模式，应该就读大学一年级的学生，样本中只有<span class="text-stress-2">17.62%</span>还在读书，<br>这其中还包含了复读和选择职业学校的学生。真正上大学的学生只占<span class="text-stress-2">5.89%</span>。</p>
+            </div>
+            <div class="attendance-chart chart" ></div>
+    </section>
+    <section class="content page-3">
+            <div class="description border-effect-1 slide-in from-left">
+                <p>
+                    <span class="text-stress-2">职业高中</span>与普通高中相比是更多学生的选择。<br>
+                    有趣的一点是大部分就读于职业学校的学生留在了北京上学。<br>
+                    而在普通高中读书的基本都回到了家乡，<br>出于中国的高考政策，学生难以在户籍地以外的地方参加高考，<br>而各个省市的高考内容各有差异,所以学生通常会提前回到家乡准备高考。
+                </p>
+            </div>
+            <div class="school-chart"></div>
+    </section>
+
+
+    <section class="title title-4">
+        <div>
+            <h2>留守还是流动?</h2>
+        </div>
+    </section>
+
+    <section class="content page-4">
+            <svg class="background-dots" viewBox="0 0 1440 1024" preserveAspectRatio="xMidYMid meet" fill="none">
+                <path d="M110.058 197.005C110.058 227.396 85.421 252.034 55.0292 252.034C24.6374 252.034 0 227.396 0 197.005C0 166.613 24.6374 141.975 55.0292 141.975C85.421 141.975 110.058 166.613 110.058 197.005Z" fill="#FFF899"/>
+                <path d="M780.315 347.785C780.315 378.177 755.677 402.814 725.285 402.814C694.894 402.814 670.256 378.177 670.256 347.785C670.256 317.393 694.894 292.756 725.285 292.756C755.677 292.756 780.315 317.393 780.315 347.785Z" fill="#FFF899"/>
+                <path d="M165.088 885.971C165.088 916.363 140.45 941 110.058 941C79.6667 941 55.0292 916.363 55.0292 885.971C55.0292 855.579 79.6667 830.942 110.058 830.942C140.45 830.942 165.088 855.579 165.088 885.971Z" fill="#FFF899"/>
+                <path d="M1077.47 55.0292C1077.47 85.421 1052.84 110.058 1022.44 110.058C992.051 110.058 967.414 85.421 967.414 55.0292C967.414 24.6374 992.051 0 1022.44 0C1052.84 0 1077.47 24.6374 1077.47 55.0292Z" fill="#FFF899"/>
+                <circle cx="1163.32" cy="709.877" r="55.0292" fill="#FFF899"/>
+                <circle cx="315.318" cy="113.911" r="41.2719" fill="#38533D"/>
+                <circle cx="217.365" cy="586.061" r="41.2719" fill="#38533D"/>
+                <circle cx="609.174" cy="781.966" r="41.2719" fill="#38533D"/>
+                <circle cx="933.846" cy="309.815" r="41.2719" fill="#38533D"/>
+            </svg>
+        <div class="page-4-container">
+            <div class="description fade-in"> <p>父母的陪伴对儿童的身心健康十分重要</p> </div>
+            <div class="description fade-in"> <p>留守儿童比流动儿童有更高的抑郁率、更低的自尊。<br>但是把孩子待在身边，要面临入学升学的阻力、高额的花费。</p></div>
+            <div class="description fade-in"> <p>对于必须离乡务工的父母来说，无论怎么选，都无法给孩子一个完整健康的童年。</p></div>
+        </div>
+    </section>
+
+    <section class="title title-5">
+        <div><h2>我们能够做什么?</h2></div>
+    </section>
+    <section class="content page-5 ">
+        <div class="description fade-in">保持对流动儿童问题的关注，呼吁降低流动儿童入学门槛，让流动儿童享受公平的教育服务。<br>
+            再微小的实际行动，也能呵护出最美的花。</div>
+    </section>
+    <section class="content page-5">
+        <div class="cards-container">
+            <div class="cards fade-in">
+                <img src="./image/card-1.jpg" alt="新公民计划">
+                <div class="card-text">2007年，南都公益基金会发起新公民计划。新公民计划致力于改善流动儿童成长环境，<br>让每个流动儿童，都能享有公平、优质、适宜的教育。</div>
+                <div class="card-link"><a href="http://www.xingongmin.org.cn/">加入他们</a></div>
+            </div>
+            <div class="cards fade-in">
+                <img src="./image/card-2.jpg" alt="hope学堂">
+                <div class="card-text">HOPE学堂是一个服务于职校老师和学生的公益平台，我们期望为职校老师提供参与式教学、应用戏剧、教师行动研究等方面的支持；为学生提供青春期教育、核心素养提升等课程。</div>
+                <div class="card-link"><a href="https://mp.weixin.qq.com/s/FEP_L037GUs4qEHRga8AXQ">加入他们</a></div>
+            </div>
+            <div class="cards fade-in">
+                <img src="./image/card-3.jpg" alt="满天星公益">
+                <div class="card-text">满天星公益的使命是提高乡村儿童的阅读品质，为实现这一使命，满天星公益以阅读循环圈理论为基础结合多年的项目实践，创建了满天星公益乡村儿童阅读推广体系。</div>
+                <div class="card-link"><a href="https://www.starscn.org/home/index/index.html">加入他们</a></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="attribute">
+           <strong> attribute:</strong>
+            <a href="https://www.flaticon.com/free-icons/mouse-clicker" title="mouse clicker icons"> Mouse clicker icons created by designvector10 - Flaticon</a>
+            <a href="http://www.stats.gov.cn/tjsj/"> 国家统计局</a>
+            <a href="https://m.thepaper.cn/baijiahao_16255384"> 在一起！中国流动人口子女发展报告 2021</a>
+            <a href="https://xueshu.baidu.com/usercenter/paper/show?paperid=8a3a6335410ec728021a8246a6a12f93&site=xueshu_se"> 打工子弟学校学生初中后流向哪里?</a>
+            <a href="https://www.researchgate.net/publication/285832846_A_social_adaptation_comparison_of_migrant_children_rear_children_and_ordinary_children"> A social adaptation comparison of migrant children, rear children, and ordinary children</a>
+        </div>
+        <div class="contact">
+            发现有问题？或者只是想打招呼<br>
+            欢迎随时邮件❤：<br>
+            10181180108@stu.ecnu.edu.cn
+        </div>
+    </footer>
+    <!-- javascript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/charts.js"></script>
+
+</body>
+</html>

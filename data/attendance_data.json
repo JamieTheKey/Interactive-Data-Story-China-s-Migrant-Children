@@ -1,0 +1,8 @@
+[
+    {"year":2011,"effective_sample_size":1737,"school_attendance":1439,"rate":0.8284},
+    {"year":2012,"effective_sample_size":1652,"school_attendance":810,"rate":0.4903},
+    {"year":2013,"effective_sample_size":1537,"school_attendance":619,"rate":0.4027},
+    {"year":2014,"effective_sample_size":1550,"school_attendance":442,"rate":0.2852},
+    {"year":2015,"effective_sample_size":1493,"school_attendance":262,"rate":0.1762}
+    
+]

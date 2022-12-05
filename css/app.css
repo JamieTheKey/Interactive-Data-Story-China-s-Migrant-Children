@@ -1,0 +1,467 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+:root{
+    --img-xl:10rem;
+    --img-l:6rem;
+    --fs-xl:3rem;
+    --fs-600:2rem;
+    --fs-400:1rem;
+}
+
+.header{
+    min-height: 100vh;
+    position: relative;
+}
+
+.intro{
+    background-color: #38533D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text{
+    color:  #FFF899;
+    font-size: var(--fs-xl);
+    line-height: 6rem;
+}
+
+.slider{
+    background-color: #38533D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+}
+
+.hide{
+    background-color: #38533D;
+    overflow: hidden;
+}
+.hide span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+/* 首页 */
+.video-wrapper{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-inner{
+    max-width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFD9CA ;
+}
+.big-text{
+    text-align: center;
+    margin: 0 auto;
+    color:#FFD9CA;
+    font-size: var(--fs-xl);
+    border-bottom: #FFD9CA 5px solid;
+    border-top:  #FFD9CA 5px solid;
+}
+.header-description{
+    padding: 20px 0;
+}
+/* 文字重点标记 */
+.text-stress{
+    height: 0.5rem;
+    background-color: #FFF899;
+    border-radius: 3px;
+    padding: 0 3px;
+    color: #0000;
+
+}
+
+.text-stress-2{
+    border-radius: 3px;
+    padding: 0 3px;
+    border-bottom: #38533D 3px solid;
+
+}
+
+section{
+    height: 100vh;
+    padding: 0 5%;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 100%;
+}
+.description{
+    display: inline-block;
+    line-height: 200%;
+    font-size: var(--fs-400);
+}
+/* 第一页 */
+.page-1{
+    background-color: #38533D;
+}
+.page-1 .description{
+    color: white;
+
+}
+
+.indication{
+    background-color: #FFF899;
+    border-radius: 5px;
+    color: #38533D;
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+    /* 解决icon问题 */
+.icon-1{
+    width: var(--fs-600);
+}
+
+.p1 p{
+    display: inline-block;
+}
+
+
+.page-1 .description:last-child{
+    padding: 5px;
+    border-left: 5px solid #FFF899;
+}
+
+.peoples{
+    display: flex;
+    flex-direction: row;
+}
+
+.people-svg{
+    width: var(--img-l);
+    fill: white;
+
+}
+#people-stress{
+    fill: #FFF899;
+}
+
+.title-2{
+    color: #FFD9CA;
+    min-height: 100vh;
+    background:url("../image/child-685325.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page-2{
+    background-color:#FFD9CA;
+    color:#38533D;
+}
+
+.page-2 .description{
+    padding: 5px;
+    border-left: 5px solid #38533D;
+}
+
+.title-3{
+    color: #FFD9CA;;
+    min-height: 100vh;
+    background:url("../image/woman-5511161_1920.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-effect-1{
+    --c:#FFF899;
+    --b:5px;
+    --g:25px;
+    --_g:#0000 25%, var(--c) 0;
+    background: 
+        conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+        var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+        0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    cursor: pointer;
+}
+
+.border-effect-1:hover{
+    --_i:100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+.page-3 .description{
+    padding: 3%;
+}
+
+.title-4{
+    color: white;
+    min-height: 100vh;
+    background:url("../image/kid_latern.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background-dots{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+.page-4-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: #38533dc4;
+    justify-content: space-evenly;
+}
+
+.page-4 .description{
+    color: white;
+    width: 30vw;
+    margin: auto 10px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-4 .description:hover{
+    color: #FFF899;
+}
+
+
+
+.title-5{
+    color: white ;
+    min-height: 100vh;
+    background:url("../image/shanghai-3459422_1920.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-5{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38533D;
+}
+
+.page-5 .description{
+    font-size:larger;
+    text-align: center;
+    padding: 5%;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition:background-color 0.5s, color 0.5s;
+    border-bottom: #FFF899 5px solid;
+    border-top: #FFF899 5px solid;;
+}
+
+.page-5 .description:hover{
+    background-color: #4c4d4c7d;
+    color: white;
+}
+
+.cards-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border: solid 2px #FFF899;
+    margin: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.cards img{
+    width: var(--img-xl);
+}
+.card-text{
+    width: 14rem;
+    font-size: var(--fs-400);
+    margin: 1rem 0.5rem;
+}
+
+.card-link{
+    padding: 7px 0;
+}
+
+.cards a{
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 10px 0;
+    border: solid 1px #38533D ;
+    color: #38533D;
+}
+.cards a:hover{
+    background-color:#38533D ;
+    color: #FFF899;
+}
+
+.from-left{
+    transform: translateX(-50%);
+}
+.from-right{
+    transform: translateX(50%);
+}
+.from-left,.from-right{
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 350ms ease-in;
+  }
+  
+.fade-in.appear{
+opacity: 1;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: #FFD9CA;
+    padding-bottom: 30px;
+}
+
+.attribute{
+    margin-left: 20px;
+}
+
+.attribute a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.contact{
+    color: #FFD9CA;
+}
+
+
+@media (max-width: 768px) { 
+    :root{
+        --img-xl:10rem;
+        --fs-xl:2rem;
+        --fs-600:1.5rem;
+        --fs-400:0.75rem;
+    }
+    .content{
+        min-height: 100vh;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .page-1 .description:last-child{
+        border-left: none;
+        border-top: 5px solid #FFF899;
+        border-bottom: 5px solid #FFF899;
+    }
+
+    .peoples{
+        flex-direction: column;
+    }
+    .page-2 .description{
+        border-left: none;
+    }
+    .chart{
+        width: 80%;
+    }
+    .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .page-4-container{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }    
+
+    .page-4 .description{
+        width: 80vw;
+    }
+
+    .border-effect-2{
+        --c:white;
+    }
+
+    .cards-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        width: 17rem;
+    }
+ }
